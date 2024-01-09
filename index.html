@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/dev.css">
+
+  <title>Frontend Mentor | Art gallery website</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="image-box">
+      <picture class="header__img" alt="People looking at a sketch">
+        <source media="(min-width:1439px)"
+          srcset="assets/desktop/image-hero.jpg 1x,assets/desktop/image-hero@2x.jpg 2x">
+        <source media="(min-width:768px)" srcset="assets/tablet/image-hero.jpg 1x,assets/tablet/image-hero@2x.jpg 2x">
+        <img srcset="assets/mobile/image-hero.jpg 1x, /assets/mobile/image-hero@2x.jpg 2x">
+      </picture>
+    </div>
+
+
+
+    <div class="header__content">
+      <h1 class="heading-primary">Modern <br>Art Gallery</h1>
+      <div class="header__text-and-link">
+        <p class="header__text">
+          The arts in the collection of the Modern Art Gallery all started
+          from a spark of inspiration. Will these pieces inspire you? Visit
+          us and find out.
+        </p>
+        <a href="location.html" class="header__link btn btn--right">Our location</a>
+      </div>
+
+    </div>
+
+  </header>
+  <main class="homepage-main">
+    <section class="your-day">
+      <img srcset="assets/mobile/image-grid-1.jpg 1x, assets/mobile/image-grid-1@2x.jpg 2x" alt=""
+        class="your-day__img">
+      <div class="your-day__content">
+        <h2 class="heading-secondary">Your day<br> at the gallery</h2>
+        <p class="your-day__text">
+          Wander through our distinct collections and find new insights about
+          our artists. Dive into the details of their creative process.
+        </p>
+      </div>
+    </section>
+    <section class="gallery">
+      <picture class="gallery__img gallery__img--1">
+        <source media="(min-width:1439px)"
+          srcset="assets/desktop/image-grid-2.jpg 1x, assets/desktop/image-grid-2@2x.jpg 2x"
+          class="gallery__img gallery__img--1">
+        <source media="(min-width:768px)"
+          srcset="assets/tablet/image-grid-2.jpg 1x, assets/tablet/image-grid-2@2x.jpg 2x"
+          class="gallery__img gallery__img--1">
+        <img srcset="assets/mobile/image-grid-2.jpg 1x , assets/mobile/image-grid-2@2x.jpg 2x" alt=""
+          class="gallery__img gallery__img--1">
+      </picture>
+      <picture>
+
+        <source media="(min-width:1439px)"
+          srcset="assets/desktop/image-grid-3.jpg 1x, assets/desktop/image-grid-3@2x.jpg 2x"
+          class="gallery__img gallery__img--2">
+        <source media="(min-width:768px)"
+          srcset="assets/tablet/image-grid-3.jpg 1x, assets/tablet/image-grid-3@2x.jpg 2x"
+          class="gallery__img gallery__img--2">
+        <img srcset="assets/mobile/image-grid-3.jpg 1x , assets/mobile/image-grid-3@2x.jpg 2x" alt=""
+          class="gallery__img gallery__img--2">
+      </picture>
+
+      <div class="gallery__img gallery__img--3">
+        <h3 class="heading-secondary heading-secondary--dark">
+          Come &amp; be <br> inspired
+        </h3>
+        <p class="gallery__text">
+          We’re excited to welcome you to our gallery and see how our collections
+          influence you.
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer footer--home">
+    <span class="footer__logo">
+      Modern <br> Art Gallery
+    </span>
+    <p class="footer__text">
+      The Modern Art Gallery is free to all visitors and open seven days a week
+      from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+    </p>
+
+    <div class="social social--home">
+      <svg class="social__icon">
+        <use xlink:href="assets/brands.svg#square-facebook"></use>
+      </svg>
+      <svg class="social__icon">
+        <use xlink:href="assets/brands.svg#instagram"></use>
+      </svg>
+      <svg class="social__icon">
+        <use xlink:href="assets/brands.svg#x-twitter"></use>
+      </svg>
+    </div>
+  </footer>
+
+</body>
+
+</html>

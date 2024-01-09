@@ -1,0 +1,60 @@
+.footer {
+    padding: 4rem;
+
+    @include respond(tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    &--home {
+        background-color: $color-black;
+        color: $color-white;
+    }
+
+    &--location {
+        background-color: $color-primary;
+        color: $color-black;
+        min-height: 30rem;
+    }
+
+    &__logo {
+        font-family: 'Big Shoulders Display', sans-serif;
+        font-weight: 900;
+        font-size: 4rem;
+        line-height: 3.5rem;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        @include text;
+
+        @include respond(tablet) {
+            width: 50%;
+            margin: 0;
+        }
+    }
+}
+
+.social {
+    display: flex;
+
+    &__icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        fill: currentColor;
+        transition: all .3s;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &--home &__icon:hover {
+        fill: $color-primary;
+    }
+
+    &--location &__icon:hover {
+        fill: $color-white;
+    }
+}

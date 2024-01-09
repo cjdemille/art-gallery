@@ -1,0 +1,67 @@
+.btn {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2rem;
+    background-color: $color-black;
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+    position: relative;
+    transition: all .3s;
+
+    &:link,
+    &:visited {
+        color: $color-white;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+    }
+
+    &--right::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 5.6rem;
+        right: -5.6rem;
+        bottom: 0;
+        background: url(../assets/icon-arrow-right.svg), $color-primary;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all .3s;
+    }
+
+    &--right:hover::after {
+        background-color: $color-black;
+    }
+
+
+    &--overlay {
+        position: absolute;
+        top: 0;
+        left: 5.6rem;
+
+        @include respond(tablet) {
+            left: 9rem;
+        }
+    }
+
+    &--left::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 5.6rem;
+        left: -5.6rem;
+        bottom: 0;
+        background: url(../assets/icon-arrow-left.svg), $color-primary;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all .3s;
+    }
+
+    &--left:hover::before {
+        background-color: $color-black;
+    }
+}

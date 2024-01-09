@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Outfit:wght@300&display=swap');
+
+.heading-primary {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 6rem;
+    line-height: 5.5rem;
+    text-transform: uppercase;
+    color: $color-black;
+
+    @include respond(desktop) {
+        color: $color-white;
+    }
+
+}
+
+.heading-secondary {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    line-height: 4.5rem;
+    text-transform: uppercase;
+    margin: 3rem 0;
+}

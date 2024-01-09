@@ -1,0 +1,50 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.homepage-main {
+    padding: 10em 3rem;
+    width: 100%;
+}
+
+.your-day {
+    @include respond(tablet) {
+        display: flex;
+        align-items: center;
+    }
+
+    @include respond(desktop) {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+
+    &__img {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        order: 1;
+
+        @include respond(tablet) {
+            flex: 0 0 55%;
+        }
+
+    }
+
+    &__content {
+        @include respond(tablet) {
+            padding-right: 5rem;
+
+        }
+    }
+
+    &__text {
+        @include text;
+        margin-bottom: 5rem;
+        color: $color-gray;
+
+    }
+}

@@ -1,0 +1,57 @@
+.location-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $color-black;
+}
+
+.map {
+    position: relative;
+
+}
+
+.location {
+    color: $color-white;
+    flex: 1 0 100%;
+    padding: 3rem;
+
+    @include respond(tablet) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include respond(desktop) {
+        padding: 5rem;
+    }
+
+    &__heading {
+        @include respond(tablet) {
+            flex: 0 0 30%;
+            margin-right: auto;
+        }
+    }
+
+    &__content {
+        @include respond(tablet) {
+            flex: 0 0 60%;
+        }
+    }
+
+    &__street-address {
+        font-size: 3.2rem;
+        color: $color-primary;
+        font-family: 'Big Shoulders Display', sans-serif;
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+    }
+
+    &__address {
+        @include text;
+    }
+
+    &__text {
+        @include text;
+    }
+}

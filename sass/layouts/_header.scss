@@ -1,0 +1,81 @@
+.header {
+    margin-bottom: 12rem;
+    position: relative;
+
+    @include respond(tablet) {
+        margin-bottom: 8rem;
+    }
+
+    &__img {
+        width: 100%;
+        box-sizing: border-box;
+        // overflow-y: hidden;
+
+        @include respond(tablet) {
+            width: 55%;
+        }
+
+        @include respond(desktop) {
+            width: 37.5%;
+            height: 80vh;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+
+            &::before {
+                content: '';
+                height: 80vh;
+                width: 200%;
+                position: absolute;
+                right: 100%;
+                background-color: $color-black;
+                font-size: 0;
+                z-index: -1;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+
+            }
+
+        }
+
+    }
+
+    &__content {
+        margin: 4rem 3rem;
+
+        @include respond(tablet) {
+            position: absolute;
+            float: left;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+        }
+
+        @include respond(desktop) {
+            width: 80%;
+            top: 40%;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+    }
+
+    &__text-and-link {
+        width: 40%;
+    }
+
+    &__text {
+        @include text;
+        color: $color-gray;
+
+        @include respond(desktop) {
+            margin-top: 0;
+        }
+    }
+}
+
+.image-box {
+    overflow: hidden;
+}

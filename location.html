@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/dev.css">
+
+  <title>Frontend Mentor | Art gallery website</title>
+</head>
+
+<body class="location-page">
+  <header class="map-box">
+    <a href="index.html" class="btn btn--left btn--overlay"> Back to Home</a>
+
+
+    <picture alt="map" class="map">
+      <source media="(min-width:1439px)" srcset="assets/desktop/image-map.png 1x,assets/desktop/image-map@2x.png 2x"
+        alt="map" class="map">
+      <source media="(min-width:768px)" srcset="assets/tablet/image-map.png 1x, assets/tablet/image-map@2x.png 2x"
+        alt="map" class="map">
+      <img srcset="assets/mobile/image-map.png 1x, /assets/mobile/image-map@2x.png 2x"
+        sizes="(max-width:500px) 440px, (max-width:1000px) 1000px" alt="map" class="map">
+
+    </picture>
+
+  </header>
+  <main>
+    <section class="location">
+      <h2 class="heading-secondary location__heading">Our location</h2>
+      <div class="location__content">
+        <span class="location__street-address">99 King Street</span>
+        <span class="location__address"> Newport <br>
+          RI 02840 <br>
+          United States of America</span>
+
+        <p class="location__text">
+          Our newly opened gallery is located near the Edward King House on 99 King
+          Street, the Modern Art Gallery is free to all visitors and open seven days
+          a week from 8am to 9pm.
+        </p>
+      </div>
+
+    </section>
+  </main>
+  <footer class="footer footer--location">
+    <span class="footer__logo">
+      Modern Art Gallery
+    </span>
+    <p class="footer__text">
+      The Modern Art Gallery is free to all visitors and open seven days a week
+      from 8am to 9pm. Find us at 99 King Street, Newport, USA.s
+    </p>
+
+    <div class="social social--location">
+      <svg class="social__icon">
+        <use xlink:href="assets/brands.svg#square-facebook"></use>
+      </svg>
+      <svg class="social__icon">
+        <use xlink:href="assets/brands.svg#instagram"></use>
+      </svg>
+      <svg class="social__icon">
+        <use xlink:href="assets/brands.svg#x-twitter"></use>
+      </svg>
+    </div>
+  </footer>
+
+</body>
+
+</html>

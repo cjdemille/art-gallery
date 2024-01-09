@@ -1,0 +1,60 @@
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    @include respond(tablet) {
+        margin: 3rem auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 40% 60%;
+        gap: 3rem;
+        grid-template-areas:
+            'img-1 img-2'
+            'img-1 img-3';
+    }
+
+    @include respond(desktop) {
+        max-width: 120rem;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__img--1 {
+        @include respond(tablet) {
+            grid-area: img-1;
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &__img--2 {
+        @include respond(tablet) {
+            grid-area: img-2;
+            height: 100%;
+
+        }
+    }
+
+    &__img--3 {
+        padding: 4rem;
+        color: $color-white;
+        background-color: $color-black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include respond(tablet) {
+            grid-area: img-3;
+            position: relative;
+        }
+
+    }
+
+    &__text {
+        @include text;
+
+        color: $color-white;
+    }
+}

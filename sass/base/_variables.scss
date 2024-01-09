@@ -1,0 +1,27 @@
+$color-primary: #D5966C;
+$color-black: #151515;
+$color-gray: #444444;
+$color-white: #FFFFFF;
+
+@mixin text {
+    margin: 3rem 0;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+}
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint ==tablet {
+        @media only screen and (min-width: 48em) {
+            @content
+        }
+    }
+
+    @if $breakpoint ==desktop {
+        @media only screen and (min-width: 90em) {
+            @content
+        }
+    }
+}

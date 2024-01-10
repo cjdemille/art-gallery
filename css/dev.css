@@ -13,6 +13,7 @@ html {
 
 body {
   box-sizing: border-box;
+  background-color: #FFFFFF;
 }
 
 .homepage-main {
@@ -68,7 +69,10 @@ body {
 }
 @media only screen and (min-width: 90em) {
   .heading-primary {
+    position: absolute;
+    mix-blend-mode: difference;
     color: #FFFFFF;
+    z-index: 12;
   }
 }
 
@@ -227,6 +231,7 @@ body {
     grid-area: img-1;
     height: 100%;
     width: auto;
+    overflow: hidden;
   }
 }
 @media only screen and (min-width: 48em) {
@@ -267,6 +272,14 @@ body {
     margin-bottom: 8rem;
   }
 }
+@media only screen and (min-width: 90em) {
+  .header {
+    background: linear-gradient(to right, #151515 0%, #151515 50%, white 50%);
+    background-size: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+}
 .header__img {
   width: 100%;
   box-sizing: border-box;
@@ -278,50 +291,44 @@ body {
 }
 @media only screen and (min-width: 90em) {
   .header__img {
-    width: 37.5%;
-    height: 80vh;
+    width: 37.5svw;
     margin: 0 auto;
     display: block;
     position: relative;
+    background-color: black;
   }
-  .header__img::before {
-    content: "";
-    height: 80vh;
-    width: 200%;
-    position: absolute;
-    right: 100%;
-    background-color: #151515;
-    font-size: 0;
-    z-index: -1;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-}
-.header__content {
-  margin: 4rem 3rem;
 }
 @media only screen and (min-width: 48em) {
-  .header__content {
+  .header__heading {
     position: absolute;
-    float: left;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50%;
+    top: 25%;
+    left: 50%;
   }
 }
 @media only screen and (min-width: 90em) {
-  .header__content {
-    width: 80%;
-    top: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+  .header__heading {
+    mix-blend-mode: difference;
+    left: 21%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
-.header__text-and-link {
-  width: 40%;
+@media only screen and (min-width: 48em) {
+  .header__text-and-link {
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+  }
+}
+@media only screen and (min-width: 90em) {
+  .header__text-and-link {
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 20%;
+  }
 }
 .header__text {
   margin: 3rem 0;
@@ -335,10 +342,6 @@ body {
   .header__text {
     margin-top: 0;
   }
-}
-
-.image-box {
-  overflow: hidden;
 }
 
 .map-box {

@@ -8,11 +8,20 @@
     text-transform: uppercase;
     color: $color-black;
 
+
     @include respond(desktop) {
+        position: absolute;
+        mix-blend-mode: difference;
         color: $color-white;
+        z-index: 12;
+
+
     }
 
+
+
 }
+
 
 .heading-secondary {
     font-family: 'Big Shoulders Display', sans-serif;

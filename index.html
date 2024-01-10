@@ -6,26 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="css/dev.css">
+  <link rel="stylesheet" href="css/style.prefix.css">
 
   <title>Frontend Mentor | Art gallery website</title>
 </head>
 
 <body>
   <header class="header">
-    <div class="image-box">
-      <picture class="header__img" alt="People looking at a sketch">
-        <source media="(min-width:1439px)"
-          srcset="assets/desktop/image-hero.jpg 1x,assets/desktop/image-hero@2x.jpg 2x">
-        <source media="(min-width:768px)" srcset="assets/tablet/image-hero.jpg 1x,assets/tablet/image-hero@2x.jpg 2x">
-        <img srcset="assets/mobile/image-hero.jpg 1x, /assets/mobile/image-hero@2x.jpg 2x">
-      </picture>
-    </div>
+    <picture class="header__img" alt="People looking at a sketch">
+      <source media="(min-width:1439px)" srcset="assets/desktop/image-hero.jpg 1x,assets/desktop/image-hero@2x.jpg 2x">
+      <source media="(min-width:768px)" srcset="assets/tablet/image-hero.jpg 1x,assets/tablet/image-hero@2x.jpg 2x">
+      <img srcset="assets/mobile/image-hero.jpg 1x, assets/mobile/image-hero@2x.jpg 2x" class="header__img">
+    </picture>
 
 
 
     <div class="header__content">
-      <h1 class="heading-primary">Modern <br>Art Gallery</h1>
+      <h1 class="heading-primary header__heading">Modern <br>Art Gallery</h1>
+
       <div class="header__text-and-link">
         <p class="header__text">
           The arts in the collection of the Modern Art Gallery all started

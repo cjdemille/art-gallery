@@ -2,8 +2,17 @@
     margin-bottom: 12rem;
     position: relative;
 
+
     @include respond(tablet) {
         margin-bottom: 8rem;
+    }
+
+    @include respond(desktop) {
+        background: linear-gradient(to right, $color-black 0%, $color-black 50%, white 50%);
+        background-size: 100%;
+        box-sizing: border-box;
+        // height: 100vh;
+        overflow: hidden;
     }
 
     &__img {
@@ -16,54 +25,76 @@
         }
 
         @include respond(desktop) {
-            width: 37.5%;
-            height: 80vh;
+            width: 37.5svw;
             margin: 0 auto;
             display: block;
             position: relative;
-
-            &::before {
-                content: '';
-                height: 80vh;
-                width: 200%;
-                position: absolute;
-                right: 100%;
-                background-color: $color-black;
-                font-size: 0;
-                z-index: -1;
-                box-sizing: border-box;
-                padding: 0;
-                margin: 0;
-
-            }
-
+            background-color: black;
         }
 
     }
 
-    &__content {
-        margin: 4rem 3rem;
+    // &__content {
+    //     margin: 4rem 3rem;
+
+    //     @include respond(tablet) {
+    //         position: absolute;
+    //         float: left;
+    //         right: 0;
+    //         top: 50%;
+    //         transform: translateY(-50%);
+    //         width: 50%;
+    //     }
+
+    // @include respond(desktop) {
+    //     position: absolute;
+    //     width: 90%;
+    //     top: 40%;
+    //     left: 50%;
+    //     transform: translate(-30%, -50%);
+
+
+    //     display: flex;
+    //     z-index: 100;
+
+
+    // }
+    // }
+
+    &__heading {
 
         @include respond(tablet) {
             position: absolute;
-            float: left;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50%;
+            top: 25%;
+            left: 50%;
         }
 
         @include respond(desktop) {
-            width: 80%;
-            top: 40%;
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
+            mix-blend-mode: difference;
+
+            left: 21%;
+            top: 50%;
+            transform: translateY(-50%);
         }
+
     }
 
     &__text-and-link {
-        width: 40%;
+        @include respond(tablet) {
+            width: 40%;
+            position: absolute;
+            left: 50%;
+            top: 40%;
+        }
+
+        @include respond(desktop) {
+
+            right: 15%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            width: 20%;
+        }
     }
 
     &__text {
@@ -74,8 +105,4 @@
             margin-top: 0;
         }
     }
-}
-
-.image-box {
-    overflow: hidden;
 }
